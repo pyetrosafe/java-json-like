@@ -1,0 +1,43 @@
+{
+  "name": "java-json-like",
+  "displayName": "Java Json Like",
+  "description": "Formats Java String like a Json",
+  "version": "0.0.1",
+  "publisher": "Pyetro S. F. da Costa",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:java-object-formatter.formatSelectedText",
+    "onCommand:java-object-formatter.formatWholeDocument"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "java-object-formatter.formatSelectedText",
+        "title": "Java Json Like: Format selected"
+      },
+      {
+        "command": "java-object-formatter.formatWholeDocument",
+        "title": "Java Json Like: Format Current Document"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.54.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.32.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
